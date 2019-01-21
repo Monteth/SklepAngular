@@ -8,8 +8,8 @@ import {WelcomeDataService} from '../service/data/welcome-data.service'
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-  name = 'x';
   welcomeMessageFromService: string
+  name = ''
   constructor(
     private route: ActivatedRoute,
     private welcomeService: WelcomeDataService) { }

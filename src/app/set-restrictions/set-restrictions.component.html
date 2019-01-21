@@ -1,0 +1,38 @@
+<div class="container" id="main-container">
+    <div class="container text-center">
+        <img src="../../assets/img/user.png" height="150px" width="150px">
+        <h2>{{pupilName}}</h2>
+    </div>
+    <br>
+
+    <div *ngIf="!isDataSaved" style="float: left;" class="text-center">
+        <h3>Ograniczenia wiekowe:</h3>
+        <br>
+        <select [(ngModel)]="selectedPegi">
+            <option *ngFor="let pegi of pegis" value="{{pegi.number}}">{{pegi.name}}</option>
+        </select>
+
+    </div>
+
+    <div *ngIf="!isDataSaved"  style="float: right" class="text-center">
+        <h3>Ograniczenia treści:</h3>
+        <div style="padding-left: 70px">
+            <tr *ngFor="let l of (limitations)">
+                <button class="btn btn-success btn-block" (click)="selectLimit(l.id)" [ngClass]="l.selected ? 'btn-danger' : 'btn-success'" style="margin-top: 4px">
+                    {{l.name}}
+                </button>
+            </tr>
+        </div>
+    </div>
+    <div *ngIf="!isDataSaved"  class="text-center" style="margin-top: 400px">
+        <button class="btn btn-primary btn-lg" (click)="saveData()" >Zapisz</button>
+    </div>
+
+    <div *ngIf="isDataSaved" class="container text-center">
+        <br>
+        <br>
+        <br>
+        <h1>Zapisano zmiany</h1>
+        <img src="../../assets/img/check.png">
+    </div>
+</div>

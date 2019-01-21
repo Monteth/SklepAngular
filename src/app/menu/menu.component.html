@@ -1,16 +1,28 @@
 <header >
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div><a href="http://localhost:4200" class="navbar-brand">Moja stronka</a> </div>
+  <div style="margin-top: 100px">
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+    <div>
+      <a routerLink="/welcome" class="navbar-brand">
+        <img id="logo" src="../../assets/img/logo42.png" alt="logo" height="50px" width="50px">
+        SpokoSklep
 
-    <ul class="navbar-nav">
-      <li><a href="/welcome/Ziomek" class="nav-link">Home</a></li>
-      <li><a href="/todos" class="nav-link">Todos</a></li>
-    </ul>
+      </a>
+    </div>
+      <ul class="navbar-nav navbar-collapse justify-content-end">
+        <li><a routerLink="/welcome" class="nav-link">Strona główna</a></li>
+        <li><a routerLink="/apps" class="nav-link">Aplikacje</a> </li>
+        <li><a routerLink="/account" class="nav-link">Konto</a> </li>
+        <li>
+          <form class="form-inline my-2 my-lg-0" (ngSubmit)="searchForApp($event)">
 
-    <ul class="navbar-nav navbar-collapse justify-content-end">
-      <li><a href="/login" class="nav-link">Login</a> </li>
-      <li><a href="/logout" class="nav-link">Logout</a> </li>
-    </ul>
+              <input id="input_search" class="form-control mr-sm-2"  type="search" placeholder="Nazwa aplikacji..." aria-label="Search">
 
+          <button class="btn btn-secondary my-2 my-sm-0" ><img src="../../assets/img/search.png"></button>
+        </form> </li>
+        <li style="padding-left: 30px"><a routerLink="/login" class="nav-link">Zaloguj się</a> </li>
+      </ul>
+    </div>
   </nav>
 </header>

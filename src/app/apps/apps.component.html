@@ -1,0 +1,32 @@
+<div class="container">
+    <br>
+    <div *ngIf="softList.length">
+    <h1 class="jasmine-title">Aplikacje</h1>
+    <br>
+    <br>
+
+        <div *ngFor="let s of softList" class="container">
+            <div style="float: left">
+                <div style="padding-left: 50px">
+                    <img src="../../assets/img/game_placeholder.png" style="width: 280px" alt="game image">
+                    <div class="card custom-card" style="width: 280px">
+                        <br>
+                        <h3 class="text-center">{{s.name | uppercase}}</h3>
+                        <p>{{s.description.substr(0, 125)}}</p>
+                        <button class="btn btn-success">Pobierz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!(softList.length)" class="text-center">
+        <br>
+        <br>
+        <br>
+        <img src="../../assets/img/warning.png" height="120px" width="120px">
+        <br>
+        <br>
+        <br>
+        <h2>Nie znaleziono aplikacji.</h2>
+    </div>
+</div>

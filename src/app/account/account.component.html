@@ -1,0 +1,35 @@
+<div class="container">
+
+    <h1 *ngIf="pupils.length">Powiązani podopieczni:</h1>
+    <div *ngIf="!pupils.length" id="no-pupils" class="container text-center">
+        <img src="../../assets/img/warning.png" height="100" width="100">
+
+        <h1>Brak przypisanych podopiecznych.</h1>
+        <br>
+        <button class="btn btn-warning">Dodaj podopiecznych</button>
+
+    </div>
+
+    <br>
+    <div class="center-block">
+        <table border="2" *ngIf="pupils">
+            <!--<thead>-->
+            <!--<tr>-->
+            <!--<th>Description</th>-->
+            <!--<th>Taget date</th>-->
+            <!--<th>Completed</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <tbody>
+            <tr *ngFor="let pupil of pupils">
+                <td><img src="../../assets/img/user.png" height="80px" width="80px"></td>
+                <td>{{pupil.firstName}}</td>
+                <td>{{pupil.lastName | uppercase}}</td>
+                <td>
+                    <button (click)="selectPupil(pupil)" class="btn btn-warning">Wybierz</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
