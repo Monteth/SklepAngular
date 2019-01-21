@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h1 *ngIf="pupils.length">Powiązani podopieczni:</h1>
+    <h1 *ngIf="pupils.length" >Powiązani podopieczni:</h1>
     <div *ngIf="!pupils.length" id="no-pupils" class="container text-center">
         <img src="../../assets/img/warning.png" height="100" width="100">
 
@@ -17,8 +17,8 @@
 
                 <tbody>
                 <tr *ngFor="let pupil of pupils">
-                    <td style="padding-left: 50px"><img src="../../assets/img/user.png" height="80px" width="80px"></td>
-                    <td style="padding-left: 50px">{{pupil.firstName}}</td>
+                    <td style="padding-left: 180px"><img src="../../assets/img/user.png" height="80px" width="80px"></td>
+                    <td style="padding-left: 70px">{{pupil.firstName}}</td>
                     <td style="padding-left: 50px">{{pupil.lastName | uppercase}}</td>
                     <td style="padding-left: 50px">
                         <button (click)="selectPupil(pupil)" class="btn btn-warning">Wybierz</button>
