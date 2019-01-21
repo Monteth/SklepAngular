@@ -8,7 +8,7 @@
     <div *ngIf="!isDataSaved" style="float: left;" class="text-center">
         <h3>Ograniczenia wiekowe:</h3>
         <br>
-        <select [(ngModel)]="selectedPegi">
+        <select id="pegi_select" [(ngModel)]="selectedPegi">
             <option *ngFor="let pegi of pegis" value="{{pegi.number}}">{{pegi.name}}</option>
         </select>
 

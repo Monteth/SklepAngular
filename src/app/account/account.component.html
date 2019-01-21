@@ -11,25 +11,21 @@
     </div>
 
     <br>
-    <div class="center-block">
-        <table border="2" *ngIf="pupils">
-            <!--<thead>-->
-            <!--<tr>-->
-            <!--<th>Description</th>-->
-            <!--<th>Taget date</th>-->
-            <!--<th>Completed</th>-->
-            <!--</tr>-->
-            <!--</thead>-->
-            <tbody>
-            <tr *ngFor="let pupil of pupils">
-                <td><img src="../../assets/img/user.png" height="80px" width="80px"></td>
-                <td>{{pupil.firstName}}</td>
-                <td>{{pupil.lastName | uppercase}}</td>
-                <td>
-                    <button (click)="selectPupil(pupil)" class="btn btn-warning">Wybierz</button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="container">
+        <div class="center-block">
+            <table *ngIf="pupils">
+
+                <tbody>
+                <tr *ngFor="let pupil of pupils">
+                    <td style="padding-left: 50px"><img src="../../assets/img/user.png" height="80px" width="80px"></td>
+                    <td style="padding-left: 50px">{{pupil.firstName}}</td>
+                    <td style="padding-left: 50px">{{pupil.lastName | uppercase}}</td>
+                    <td style="padding-left: 50px">
+                        <button (click)="selectPupil(pupil)" class="btn btn-warning">Wybierz</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
