@@ -1,27 +1,33 @@
-# Ang1
+# POSklep Angular
+aplikacja frontendowa sklepu internetowego.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.7.
+## Założenia
+Serwis ma udostępniać oprogramowanie dostosowane do wieku i dojżałości dziecka. W tym celu opiekun może ustalić konkretne ograniczenia dla konta dziecka opierające się na standardzie PEGI.
 
-## Development server
+##Zastosowanie
+Wyświetlanie dostępnego oprogramowania
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Wyświetlanie oprogramowania](https://bitbucket.org/Monteth/posklepangular/raw/ef78167e143edb440bdccdc46ed39d3e9341f771/Readme/POAngular_software.png)
 
-## Code scaffolding
+Wybór dziecka
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Wybór dziecka](https://bitbucket.org/Monteth/posklepangular/raw/ef78167e143edb440bdccdc46ed39d3e9341f771/Readme/POAngular_pupils.png)
 
-## Build
+Ustalenie ograniczeń
+![Ustalenie ograniczeń](https://bitbucket.org/Monteth/posklepangular/raw/ef78167e143edb440bdccdc46ed39d3e9341f771/Readme/POAngular_limitations.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Technologie
+Aplikacja została napisana w TypeScript przy pomocy frameworku Angular.
 
-## Running unit tests
+## Backend
+Aplikacja jest pomostem między użytkownikiem a aplikacją serwerową, której kod można znaleźć tu:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+[Spring](https://bitbucket.org/Monteth/posklepspring/src/master/)
 
-## Running end-to-end tests
+##Autor
+###Konrad Bosak
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+email: konradbosak@protonmail.com
 
-## Further help
+Facebook: [fb.com/konrad.bosak](fb.com/konrad.bosak)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
